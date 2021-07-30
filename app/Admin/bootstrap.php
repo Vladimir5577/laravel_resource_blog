@@ -1,7 +1,7 @@
 <?php
 
 // PackageManager::load('admin-default')
-//    ->css('extend', public_path('packages/sleepingowl/default/css/extend.css'));
+   // ->css('extend', public_path('packages/sleepingowl/default/css/extend.css'));
 
 // Uncomment the lines below for using your custom css or js files:
 // Meta::addCss('admin-app-addon', asset('css/admin-app-fixes.css'), ['admin-default']);
