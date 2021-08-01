@@ -20,7 +20,8 @@ class CreatePostsTable extends Migration
             $table->string('subtitle');
             $table->text('description');
             $table->unsignedBigInteger('likes')->nullable();
-            $table->boolean('is_active');
+            $table->unsignedBigInteger('views')->nullable();
+            $table->boolean('is_active')->default(false);
             $table->timestamps();
 
             

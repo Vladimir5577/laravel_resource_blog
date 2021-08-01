@@ -38,9 +38,6 @@ class RegisterController extends Controller
 
     public function __construct()
     {
-            dd('Finish');
-
-
         $this->middleware('guest');
     }
 

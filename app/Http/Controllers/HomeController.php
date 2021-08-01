@@ -23,9 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
-        dd(url()->current());
-        dd(APP_URL . '/photo/assets/ava_1.png');
+        
+        $user = \App\Models\User::first();
+        dd($user->image);
+
 
         return view('home');
     }
