@@ -58,7 +58,7 @@ class Comments extends Section implements Initializable
     {
         $columns = [
             AdminColumn::text('id', '#')->setWidth('50px')->setHtmlAttribute('class', 'text-center'),
-            AdminColumn::link('name', 'Name', 'created_at')
+            AdminColumn::text('comment', 'Comments')
                 ->setSearchCallback(function($column, $query, $search){
                     return $query
                         ->orWhere('name', 'like', '%'.$search.'%')
@@ -69,7 +69,7 @@ class Comments extends Section implements Initializable
                     $query->orderBy('created_at', $direction);
                 })
             ,
-            AdminColumn::boolean('name', 'On'),
+            \AdminColumnEditable::checkbox('is_active', 'Is active'),
             AdminColumn::text('created_at', 'Created / updated', 'updated_at')
                 ->setWidth('160px')
                 ->setOrderable(function($query, $direction) {

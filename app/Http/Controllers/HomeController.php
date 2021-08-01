@@ -25,9 +25,9 @@ class HomeController extends Controller
     {
         
         $user = \App\Models\User::first();
-        dd($user->image);
+        // dd($user->image);
 
 
-        return view('home');
+        return view('home', ['user' => $user]);
     }
 }

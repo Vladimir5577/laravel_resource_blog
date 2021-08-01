@@ -13,6 +13,13 @@ trait MediaLibrary
 
 	public function getImageAttribute(): string
 	{
-		return $this->getFirstMedia()->getUrl();
+		// return public_path('/media/5/prog_2.png');
+
+
+		return $this->getMedia()[0]->getFullUrl();
+
+		// return $this->getFirstMediaUrl();
+
+		// return $this->getFirstMedia()->getUrl();
 	}
 }

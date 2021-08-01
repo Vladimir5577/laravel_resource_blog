@@ -151,7 +151,7 @@ class Posts extends Section implements Initializable
                 // AdminFormElement::html('last AdminFormElement without comma')
             ], 'col-xs-12 col-sm-6 col-md-8 col-lg-2'),
 
-        ]);
+        ])->setHtmlAttribute('enctype', 'multipart/form-data');
 
         $form->getButtons()->setButtons([
             'save'  => new Save(),
